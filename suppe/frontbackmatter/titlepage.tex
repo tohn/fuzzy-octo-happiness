@@ -1,0 +1,40 @@
+\begin{titlepage}
+\pdfbookmark{Titlepage}{Titlepage}
+\changetext{}{}{}{((\paperwidth  - \textwidth) / 2) - \oddsidemargin - \hoffset - 1in}{}
+\null\vfill
+\begin{center}
+\large
+\sffamily
+
+%\tikz[remember picture,overlay] \node[opacity=0.3,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{tuetensuppe2}};
+%\includegraphics[width=\paperwidth,height=\paperheight]{tuetensuppe2}
+
+% https://tex.stackexchange.com/questions/46280/how-to-create-a-background-image-on-title-page-with-latex
+\ThisLRCornerWallPaper{1}{tuetensuppe}
+
+%\bigskip
+
+{\Large\spacedlowsmallcaps{\myName}} \\
+
+\bigskip
+
+{\huge\spacedlowsmallcaps{\myTitle} \\
+}
+\bigskip
+    
+\vspace{17.5cm}
+
+%\begin{tabular} {cc}
+%\parbox{0.3\textwidth}{\includegraphics[width=2.5cm]{birds}}
+%&
+%\parbox{0.7\textwidth}{{\Large\spacedlowsmallcaps{\mySubTitle}} \\ 
+%
+%					{\normalsize
+%					
+%					\myGroup \\
+%					\myUrl \\
+%					\myTime}}
+%			\end{tabular}
+\end{center}
+\vfill
+\end{titlepage}

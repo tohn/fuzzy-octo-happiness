@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper,twoside,openright,titlepage,fleqn,%
+               headinclude,,footinclude,BCOR5mm,%
+               numbers=noenddot,cleardoublepage=empty,%
+               tablecaptionabove]{scrreprt}
+               
+%\usepackage[italian,american]{babel}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{varioref}
+\usepackage[style=philosophy-modern,hyperref,square,natbib]{biblatex}
+\usepackage{chngpage}
+\usepackage{calc}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage{makeidx}
+\usepackage{fixltx2e}
+\usepackage{relsize}
+\usepackage{lipsum}
+\usepackage[eulerchapternumbers,subfig,beramono,eulermath,pdfspacing,listings]{classicthesis}
+\usepackage{arsclassica}
+\usepackage{wallpaper}
+%\usepackage{tikz}
+%\usepackage[top=0cm, bottom=0cm, outer=0cm, inner=0cm]{geometry}
+
+\input{suppe-settings}
+
+\newcommand{\quotes}[3][0]{%
+   \definecolor{authorcolor}{RGB}{51, 153, 51}
+   \definecolor{datecolor}  {RGB}{51, 153, 51}
+   %
+   \noindent\makebox[0.90\textwidth]{%
+      \begin{minipage}[t]{0.50\textwidth}%
+         \hfill%
+      \end{minipage}%
+      \begin{minipage}[t]{0.50\textwidth}%
+         {\small\ignorespaces\slshape #2}\\[0.5em]%
+         \medskip%
+         \hfill\texttt{---} {{\color{authorcolor}{#3}}}%
+         \ifnum#1>0%
+            [{\color{datecolor}{#1}}]%
+         \fi%
+      \end{minipage}%
+   }}
+
+\begin{document}
+\pagenumbering{roman}
+\pagestyle{plain}
+%******************************************************************
+% Frontmatter
+%******************************************************************
+\input{frontbackmatter/titlepage}
+%\input{frontbackmatter/titleback}
+\clearpage
+%\input{frontbackmatter/abstract+sommario}
+%\input{frontbackmatter/acknowledgements}
+\pagestyle{scrheadings} 
+\clearpage
+\input{frontbackmatter/contents}
+\cleardoublepage
+%******************************************************************
+% Mainmatter
+%******************************************************************
+\pagenumbering{arabic}
+%\input{chapters/fundamentals}
+%\input{chapters/code}
+\input{chapters/vorwort}
+\input{chapters/text}
+\input{chapters/abspann}
+\input{chapters/danke}
+% *****************************************************************
+% Backmatter
+%******************************************************************
+%\clearpage
+%\input{frontbackmatter/bibliography}
+%\clearpage
+%\input{frontbackmatter/index}
+\end{document}
